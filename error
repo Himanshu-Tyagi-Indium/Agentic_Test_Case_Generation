@@ -1,8 +1,0 @@
-from typing import Dict, Optional
-from pydantic import BaseModel, Field
-
-class ValidationSchema(BaseModel):
-    drugProfileData: Optional[Dict[str, Optional[str]]] = Field(
-        default=None,
-        description="Final validated drug profile data after validation. Keys are field names, values are strings or null."
-    )
